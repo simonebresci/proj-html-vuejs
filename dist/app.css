@@ -1,12 +1,29 @@
 .card-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   width: 450px;
   height: 250px;
+  padding: 25px 30px;
 }
-.card-article img {
+.card-article .card-article-layover {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: -1;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+}
+.card-article .card-article-bg {
+  position: absolute;
+  background-color: black;
+  opacity: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -2;
 }
 .card-article .card-article-category {
   display: inline-block;
@@ -25,11 +42,16 @@
 }
 .card-article .card-article-description {
   display: none;
+  font-weight: bold;
   color: #888888;
+  margin-top: 15px;
 }
 
 .card-article:hover .card-article-description {
   display: block;
+}
+.card-article:hover .card-article-layover {
+  z-index: -1;
 }
 
 .palette-bg1 {
