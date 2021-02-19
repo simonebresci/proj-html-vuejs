@@ -1,3 +1,9 @@
+// Progetto
+// 1) Solo Desktop
+// 2) Header e footer con struttura dati vue
+// Deadline
+// 23/02 ore 18.00
+// 3) Ricorda hover!
 
 var app = new Vue ({
   el: '#root',
