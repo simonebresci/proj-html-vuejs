@@ -5,26 +5,143 @@
 //******************************************************************************
 
 
+//ColorBg6 non sembra ok
+
+
+// @mixin menu-inline-ul-light-style-1{
+//   color:$colorTxt1;
+// }
+
+@mixin menu-inline-li-light-style-1{
+  color:$colorTxt1;
+  display: inline-block;
+  cursor:pointer;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+@mixin menu-inline-li-dark-style-1{
+  color:$colorTxt7;
+  display: inline-block;
+  cursor:pointer;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+
+
+
+
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+
 h1,h2,h3 {
   font-size: 36px;
 }
 
-#super-container{
 
-  width: 1200px;
-  height: 400px;
-  background-color: green;
-
+.container{
+  width: 100%;
 
   .content{
-    color:black;
+    width: 70%;
+    width: 1400px;
+    margin: 0 auto;
+  }
 
-    &-title{
-      text-decoration: underline;
+}
+
+
+.header{
+  width: 100%;
+
+  &-top{
+    display: flex;
+    align-items: center;
+    background-color: $colorBg6;
+    height: 50px;
+
+    &-menu{
+      // @include menu-inline-ul-light-style-1;
+    }
+
+    &-menu li{
+      @include menu-inline-li-light-style-1;
+    }
+
+    &-menu li:first-child{
+      font-weight: normal;
     }
 
   }
 
+  &-center{
+    height: 120px;
+
+    &-logo{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $colorBrd3
+
+    }
+
+    &-logo img{
+      width: 100px;
+    }
+
+  }
+
+  &-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+
+    &-menu{
+
+    }
+
+    &-menu li{
+      @include menu-inline-li-dark-style-1;
+    }
+    &-menu li:first-child{
+      color: $colorTxt4;
+    }
+
+  }
+
+}
+
+// Riga 1
+.content-row-1{
+
+
 
 
 }
+
+// Container di esempio SCSS
+// #super-container{
+//
+//   width: 1200px;
+//   height: 400px;
+//   background-color: green;
+//
+//
+//   .content{
+//     color:black;
+//
+//     &-title{
+//       text-decoration: underline;
+//     }
+//
+//   }
+//
+//
+//
+// }
