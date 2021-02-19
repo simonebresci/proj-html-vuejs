@@ -1,3 +1,37 @@
+.card-article {
+  position: relative;
+  width: 450px;
+  height: 250px;
+}
+.card-article img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.card-article .card-article-category {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #0088CC;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+.card-article .card-article-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.card-article .card-article-description {
+  display: none;
+  color: #888888;
+}
+
+.card-article:hover .card-article-description {
+  display: block;
+}
+
 .palette-bg1 {
   display: inline-block;
   width: 80px;

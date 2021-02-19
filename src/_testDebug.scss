@@ -1,3 +1,63 @@
+@mixin card-article-style-1{
+  position: relative;
+  width: 450px;
+  height: 250px;
+
+  & img{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .card-article-category{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: $colorTxt1;
+    background-color:  $colorBg5;
+    border-radius: 2px;
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+
+  .card-article-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: $colorTxt1;
+  }
+
+  .card-article-description{
+    display: none;
+    color: $colorTxt3;
+  }
+
+}
+
+@mixin card-article-style-1-hover{
+
+  .card-article-description{
+    display: block;
+  }
+
+}
+// CARD ARTICLE + ANIMATION
+.card-article{
+  @include card-article-style-1;
+
+}
+
+.card-article:hover {
+  @include card-article-style-1-hover;
+
+}
+// /CARD ARTICLE + ANIMATION
+
+
+
+
+
+
+
 // TEST COMPONENTI *************************************************************
 @mixin paletteModel {
   display: inline-block;
