@@ -5,6 +5,7 @@ h1, h2, h3 {
 #super-container {
   width: 1200px;
   height: 400px;
+  background-color: green;
 }
 #super-container .content {
   color: black;
