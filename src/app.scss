@@ -1,8 +1,12 @@
 
-$hColor: rgb(255,0,0);
+@import "colors";
+@import "testDebug";
+
+//******************************************************************************
+
 
 h1,h2,h3 {
-  color: $hColor;
+  font-size: 36px;
 }
 
 #super-container{

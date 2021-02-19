@@ -1,0 +1,46 @@
+// TEST COMPONENTI *************************************************************
+@mixin paletteModel {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+// PALETTE COLORI
+.palette-bg1{@include paletteModel; background-color: $colorBg1};
+.palette-bg2{@include paletteModel; background-color: $colorBg2};
+.palette-bg3{@include paletteModel; background-color: $colorBg3};
+.palette-bg4{@include paletteModel; background-color: $colorBg4};
+.palette-bg5{@include paletteModel; background-color: $colorBg5};
+.palette-bg6{@include paletteModel; background-color: $colorBg6};
+.palette-bg7{@include paletteModel; background-color: $colorBg7};
+.palette-bg8{@include paletteModel; background-color: $colorBg8};
+.palette-bg9{@include paletteModel; background-color: $colorBg9};
+.palette-bg10{@include paletteModel; background-color: $colorBg10};
+.palette-bg11{@include paletteModel; background-color: $colorBg11};
+.palette-bg12{@include paletteModel; background-color: $colorBg12};
+.palette-bg13{@include paletteModel; background-color: $colorBg13};
+
+.palette-Txt1{@include paletteModel; background-color: $colorTxt1};
+.palette-Txt2{@include paletteModel; background-color: $colorTxt2};
+.palette-Txt3{@include paletteModel; background-color: $colorTxt3};
+.palette-Txt4{@include paletteModel; background-color: $colorTxt4};
+.palette-Txt5{@include paletteModel; background-color: $colorTxt5};
+.palette-Txt6{@include paletteModel; background-color: $colorTxt6};
+.palette-Txt7{@include paletteModel; background-color: $colorTxt7};
+.palette-Txt8{@include paletteModel; background-color: $colorTxt8};
+.palette-Txt9{@include paletteModel; background-color: $colorTxt9};
+.palette-Txt10{@include paletteModel; background-color: $colorTxt10};
+
+.palette-Brd1{@include paletteModel; background-color: $colorBrd1};
+.palette-Brd2{@include paletteModel; background-color: $colorBrd2};
+.palette-Brd3{@include paletteModel; background-color: $colorBrd3};
+.palette-Brd4{@include paletteModel; background-color: $colorBrd4};
+.palette-Brd5{@include paletteModel; background-color: $colorBrd5};
+.palette-Brd6{@include paletteModel; background-color: $colorBrd6};
+.palette-Brd7{@include paletteModel; background-color: $colorBrd7};
+.palette-Brd8{@include paletteModel; background-color: $colorBrd8};
+.palette-Brd9{@include paletteModel; background-color: $colorBrd9};
+.palette-Brd10{@include paletteModel; background-color: $colorBrd10};
+.palette-Brd11{@include paletteModel; background-color: $colorBrd11};
