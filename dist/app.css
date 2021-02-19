@@ -1,0 +1,14 @@
+h1, h2, h3 {
+  color: red;
+}
+
+#super-container {
+  width: 1200px;
+  height: 400px;
+}
+#super-container .content {
+  color: black;
+}
+#super-container .content-title {
+  text-decoration: underline;
+}
