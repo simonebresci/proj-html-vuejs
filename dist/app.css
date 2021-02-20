@@ -501,6 +501,7 @@ h1, h2, h3 {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  padding: 50px 0;
 }
 .row-2-background .row-2-col-left, .row-2-background .row-2-col-center, .row-2-background .row-2-col-right {
   width: 450px;
@@ -543,6 +544,7 @@ h1, h2, h3 {
 .row-2-background .row-2-col-right .articles-list-title {
   font-weight: bold;
   margin-bottom: 5px;
+  margin-bottom: 40px;
 }
 .row-2-background .row-2-col-right .card-article {
   width: 450px;
@@ -554,7 +556,7 @@ h1, h2, h3 {
   padding: 25px 30px;
   overflow: hidden;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .row-2-background .row-2-col-right .card-article-layover {
   position: absolute;
@@ -618,7 +620,7 @@ h1, h2, h3 {
 .row-2-background .row-2-col-right .author-list .author-text-name {
   color: #1C2023;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 .row-2-background .row-2-col-right .author-list .author-text-description {
   color: #B7B7B7;
