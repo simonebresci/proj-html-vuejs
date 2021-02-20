@@ -7,7 +7,8 @@
 // ROW 1
 // TODO: margini card non tornano: messo 20px anzichè 30px;
 // TODO: eliminare margine inferiore dell'ultima riga delle card
-
+// TODO: hover su icone font-awesome
+// TODO: card - slide testo in hover
 
 // MIXIN **********************************************************************
 @mixin content-style{
@@ -37,6 +38,7 @@
 }
 
 
+
 @mixin btn-category{
   text-align: center;
   display: inline-block;
@@ -51,6 +53,7 @@
 }
 
 @mixin btn-category-hover{
+  transition: background-color 0.4s;
   background-color: $colorBg9;
 }
 
@@ -84,6 +87,7 @@
   // content 2
 
   &-layover{
+    opacity: 0%;
     position: absolute;
     top:0;
     left:0;
@@ -135,10 +139,13 @@
 }
 
 @mixin card-article-style-1-hover{
+  cursor: pointer;
   .card-article-content-description{
     display: block;
   }
   .card-article-layover{
+    opacity: 100%;
+    transition: opacity 2s;
     z-index: 1;
   }
 }
@@ -218,6 +225,15 @@
   }
 }
 
+@mixin hover-standard-style1{
+  opacity: 70%;
+  transition: opacity 0.4s, text-shadow 0.2s;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  // background-color: rgba(0,0,0,0.3);
+  border-radius: 5px;
+
+}
+
 // /MIXIN **********************************************************************
 
 // GENERIC CLASS ***************************************************************
@@ -249,14 +265,19 @@ h1,h2,h3 {
   .header-top{
     @include content-style;
 
-    &-menu{
+    &-navbar{
       li{
         @include menu-inline-li-light-style-1;
+      }
+
+      li:hover{
+        @include hover-standard-style1;
       }
       li:first-child{
         font-weight: normal;
       }
     }
+
 
   }
 }
@@ -296,6 +317,9 @@ h1,h2,h3 {
     &-menu{
       li{
         @include menu-inline-li-dark-style-1;
+      }
+      li:hover{
+        @include hover-standard-style1;
       }
       li:first-child{
         color: $colorTxt4;
@@ -352,7 +376,7 @@ h1,h2,h3 {
 
     &-col-left, &-col-center, &-col-right{
       width: 450px;
-      height: 100px;
+      // height: 100px;
     }
 
     &-col-left, &-col-center{
@@ -365,6 +389,17 @@ h1,h2,h3 {
             font-weight: bold;
             margin-bottom: 5px;
           }
+
+          .article:hover{
+            cursor: pointer;
+          }
+
+          .article:hover .article-text .article-text-name{
+            @include hover-standard-style1;
+
+          }
+
+
       }
     }
 

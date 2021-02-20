@@ -8,14 +8,14 @@
 var app = new Vue ({
   el: '#root',
   data: {
-    // I/O INTERFACCIA GRAFICA
-    searchInput: 'Zombie',
-    selected: 'ciao',
+    // HEADER DATA
+    headerTopNavbar: ['SIGN IN','ABOUT US','CONTACT US', 'BUY NOW'],
+    headerBottomNavbar: ['HOME','ELEMENTS','FEATURES', 'PAGES', 'PORTFOLIO', 'BLOG','SHOP'],
 
+    // FOOTER DATA
+    footerLinks: ['FAQ\'s', 'Sitemap', 'Contact Us']
   },
-  mounted() {
 
-  },
   methods: {
     // METODI GENERICI *********************************************************
     // VALORE DA TRASFORMARE CON PROPORZIONE

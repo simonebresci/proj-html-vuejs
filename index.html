@@ -15,15 +15,13 @@
     <div id="root">
 
       <div class="container">
-        <!-- <div class="content"> -->
+
           <div class="header-top-background">
             <div class="header-top">
-              <ul class="header-top-menu">
+              <ul class="header-top-navbar">
                 <li>Everything about Lifestyle, Travel and Gadgets!</li>
-                <li>SIGN IN</li>
-                <li>ABOUT US</li>
-                <li>CONTACT US</li>
-                <li>BUY NOW</li>
+                <li v-for="el in headerTopNavbar"> {{el}} </li>
+
               </ul>
             </div>
           </div>
@@ -39,13 +37,7 @@
             <div class="header-bottom-background">
               <div class="header-bottom">
                 <ul class="header-bottom-menu">
-                  <li>HOME</li>
-                  <li>ELEMENTS</li>
-                  <li>FEATURES</li>
-                  <li>PAGES</li>
-                  <li>PORTFOLIO</li>
-                  <li>BLOG</li>
-                  <li>SHOP</li>
+                  <li v-for="el in headerBottomNavbar"> {{el}} </li>
                 </ul>
 
                 <ul class="header-bottom-menu-2">
@@ -477,6 +469,14 @@
 
           </div>
           <!-- /row-3-background -->
+
+          <!-- Test Vue Navbar -->
+          <!-- <footer>
+            <ul>
+              <li v-for="el in footerLinks">{{el}}</li>
+            </ul>
+          </footer> -->
+          <!-- /Test Vue Navbar -->
 
       </div>
       <!-- /Container -->
