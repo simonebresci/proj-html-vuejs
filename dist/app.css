@@ -705,3 +705,107 @@ h1, h2, h3 {
   transition: background-color 0.4s;
   background-color: rgba(33, 37, 41, 0.8);
 }
+
+.footer-top-background {
+  background-color: rgba(33, 37, 41, 0.8);
+  padding: 50px 0;
+  height: 400px;
+}
+.footer-top-background .footer-top {
+  width: 1410px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-top-background .footer-top-about {
+  width: 420px;
+  border: 4px dashed green;
+}
+.footer-top-background .footer-top-about .menu-dark {
+  list-style: none;
+  color: #777777;
+}
+.footer-top-background .footer-top-about .menu-dark li {
+  margin-bottom: 15px;
+}
+.footer-top-background .footer-top-about .menu-dark-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+}
+.footer-top-background .footer-top-about .menu-dark-highlight {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.footer-top-background .footer-top-about .menu-dark-highlight {
+  cursor: pointer;
+}
+.footer-top-background .footer-top-about .menu-dark-highlight:hover {
+  opacity: 70%;
+  transition: opacity 0.4s, text-shadow 0.2s;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.footer-top-background .footer-top-posts {
+  width: 320px;
+  border: 4px dashed green;
+}
+.footer-top-background .footer-top-posts .articles-icon-list {
+  list-style: none;
+}
+.footer-top-background .footer-top-posts .articles-icon-list .article {
+  display: flex;
+  padding: 15px 0;
+}
+.footer-top-background .footer-top-posts .articles-icon-list .article-text {
+  list-style: none;
+}
+.footer-top-background .footer-top-posts .articles-icon-list .article-text-name {
+  color: #B7B7B7;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.footer-top-background .footer-top-posts .articles-icon-list .article-text-date {
+  color: #777777;
+}
+.footer-top-background .footer-top-posts .articles-icon-list .article-img {
+  display: inline;
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.footer-top-background .footer-top-posts .articles-icon-list-title {
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.footer-top-background .footer-top-posts .articles-icon-list .article:hover {
+  cursor: pointer;
+}
+.footer-top-background .footer-top-posts .articles-icon-list .article:hover .article-text .article-text-name {
+  opacity: 70%;
+  transition: opacity 0.4s, text-shadow 0.2s;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.footer-top-background .footer-top-comments {
+  width: 325px;
+  border: 4px dashed green;
+}
+.footer-top-background .footer-top-categories {
+  width: 200px;
+  border: 4px dashed green;
+}
+
+.footer-bottom-background {
+  background-color: #1C2023;
+  padding: 50px 0;
+  height: 200px;
+}
+.footer-bottom-background .footer-bottom {
+  width: 1410px;
+  margin: 0 auto;
+}

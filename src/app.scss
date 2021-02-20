@@ -9,6 +9,7 @@
 // TODO: eliminare margine inferiore dell'ultima riga delle card
 // TODO: hover su icone font-awesome
 // TODO: card - slide testo in hover
+// TODO: controllare colori con trasparenza + sfumature blu
 
 // MIXIN **********************************************************************
 @mixin content-style{
@@ -156,6 +157,12 @@
   margin-bottom: 5px;
 }
 
+@mixin list-title-style-2{
+  color: $colorTxt1;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
 // ARTICLE LIST WITH ICON STYLE 1
 @mixin articleIconImg-style-1{
 
@@ -192,6 +199,41 @@
 
 
 // /ARTICLE LIST WITH ICON STYLE 1
+
+
+@mixin articleIconImg-style-2{
+
+
+  .article{
+    display: flex;
+    padding: 15px 0;
+
+
+    &-text{
+      @include resetListBullets;
+
+      &-name{
+        color: $colorTxt2;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &-date{
+        color: $colorTxt5;
+      }
+
+    }
+
+    &-img{
+      display: inline;
+      width: 70px;
+      height: 70px;
+      margin-right:15px;
+      border-radius: 50%;
+    }
+  }
+}
+
 
 // AUTHOR LIST LI STYLE 1
 @mixin authorIconImg-style-1{
@@ -231,6 +273,26 @@
   text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
   // background-color: rgba(0,0,0,0.3);
   border-radius: 5px;
+
+}
+
+@mixin menu-dark-style-1{
+  @include resetListBullets;
+  color: $colorTxt5;
+
+  li{
+    margin-bottom: 15px;
+  }
+
+  &-title{
+    @include list-title-style-1;
+    color: $colorTxt1;
+  }
+
+  &-highlight{
+    font-weight: bold;
+    color: $colorTxt1;
+  }
 
 }
 
@@ -498,4 +560,81 @@ h1,h2,h3 {
   }
 
 }
-// /ROW 3 ***********************************************************************
+// /ROW 3 **********************************************************************
+
+// FOOTER TOP ******************************************************************
+.footer-top-background{
+  background-color: $colorBg9;
+  padding: 50px 0;
+  height: 400px;
+
+  .footer-top{
+    @include content-style;
+    display: flex;
+    justify-content: space-between;
+
+    &-about{
+      width: 420px;
+      border: 4px dashed green;
+      .menu-dark{
+        @include menu-dark-style-1;
+
+        &-highlight{
+          cursor:pointer;
+        }
+
+        &-highlight:hover{
+          @include hover-standard-style1;
+        }
+      }
+    }
+
+    &-posts{
+      width: 320px;
+      border: 4px dashed green;
+
+      .articles-icon-list{
+          @include resetListBullets;
+          @include articleIconImg-style-2;
+
+          &-title{
+            @include list-title-style-2;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+
+          .article:hover{
+            cursor: pointer;
+          }
+
+          .article:hover .article-text .article-text-name{
+            @include hover-standard-style1;
+
+          }
+
+
+      }
+    }
+    &-comments{
+      width: 325px;
+      border: 4px dashed green;
+    }
+    &-categories{
+      width: 200px;
+      border: 4px dashed green;
+    }
+  }
+}
+// /FOOTER TOP ******************************************************************
+
+// FOOTER BOTTOM ******************************************************************
+.footer-bottom-background{
+  background-color: $colorBg10;
+  padding: 50px 0;
+  height: 200px;
+
+  .footer-bottom{
+    @include content-style;
+  }
+}
+// /FOOTER BOTTOM ******************************************************************
