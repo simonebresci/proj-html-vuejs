@@ -409,7 +409,7 @@ h1, h2, h3 {
 }
 .container .content {
   width: 70%;
-  width: 1400px;
+  width: 1410px;
   margin: 0 auto;
 }
 
@@ -459,4 +459,31 @@ h1, h2, h3 {
 }
 .header-bottom-menu li:first-child {
   color: #0088CC;
+}
+
+.content-row-3 {
+  background-color: #0088CC;
+  height: 150px;
+}
+.content-row-3 .menu-categories li {
+  display: inline-block;
+  cursor: pointer;
+}
+.content-row-3 .menu-categories li:first-child {
+  margin-right: 40px;
+}
+.content-row-3 .menu-categories .button-category {
+  text-align: center;
+  display: inline-block;
+  width: 185px;
+  height: 50px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-right: 40px;
+  color: #FFFFFF;
+  background-color: #212529;
+  cursor: pointer;
+}
+.content-row-3 .menu-categories .button-category:hover {
+  background-color: rgba(33, 37, 41, 0.8);
 }

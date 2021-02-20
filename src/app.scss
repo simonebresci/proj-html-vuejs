@@ -29,6 +29,22 @@
 }
 
 
+@mixin btn-category{
+  text-align: center;
+  display: inline-block;
+  width: 185px;
+  height: 50px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-right: 40px;
+  color: $colorTxt1;
+  background-color: $colorBg8;
+  cursor: pointer;
+}
+
+@mixin btn-category-hover{
+  background-color: $colorBg9;
+}
 
 
 
@@ -49,7 +65,7 @@ h1,h2,h3 {
 
   .content{
     width: 70%;
-    width: 1400px;
+    width: 1410px;
     margin: 0 auto;
   }
 
@@ -120,6 +136,33 @@ h1,h2,h3 {
 // Riga 1
 .content-row-1{
 
+
+
+
+}
+
+.content-row-3{
+  background-color: $colorBg5;
+  height: 150px;
+  .menu-categories{
+    li{
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    li:first-child{
+      margin-right: 40px;
+    }
+
+    .button-category{
+      @include btn-category;
+    }
+
+    .button-category:hover{
+      @include btn-category-hover;
+    }
+
+  }
 
 
 
