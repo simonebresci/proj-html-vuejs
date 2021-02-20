@@ -5,24 +5,8 @@
 //******************************************************************************
 
 
-//ColorBg6 non sembra ok
-
-
-// @mixin menu-inline-ul-light-style-1{
-//   color:$colorTxt1;
-// }
-
-@mixin background-full-size{
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
+// MIXIN **********************************************************************
 @mixin content-style{
-  width: 70%;
   width: 1410px;
   margin: 0 auto;
 }
@@ -51,7 +35,7 @@
   height: 50px;
   font-weight: bold;
   line-height: 50px;
-  margin-right: 40px;
+  // margin-right: 40px;
   color: $colorTxt1;
   background-color: $colorBg8;
   cursor: pointer;
@@ -61,8 +45,13 @@
   background-color: $colorBg9;
 }
 
+@mixin border-bottom-style-1{
+  border: 1px solid $colorBrd3;
+}
 
+// /MIXIN **********************************************************************
 
+// GENERIC CLASS ***************************************************************
 *{
   box-sizing: border-box;
   padding: 0px;
@@ -77,97 +66,98 @@ h1,h2,h3 {
 
 .container{
   width: 100%;
-
-  // .content{
-  //   width: 70%;
-  //   width: 1410px;
-  //   margin: 0 auto;
-  // }
-
 }
+// /GENERIC CLASS ***************************************************************
 
 
+// HEADER TOP ******************************************************************
+.header-top-background{
+  display: flex;
+  align-items: center;
+  background-color: $colorBg6;
+  height: 50px;
 
-  .header-top-background{
-    // position:relative;
-    display: flex;
-    align-items: center;
-    background-color: $colorBg6;
-    height: 50px;
-    // border: 1px solid blue;
+  .header-top{
+    @include content-style;
 
-    .header-top{
-      @include content-style;
-
-      &-menu{
-        // @include menu-inline-ul-light-style-1;
-      }
-
-      &-menu li{
+    &-menu{
+      li{
         @include menu-inline-li-light-style-1;
       }
-
-      &-menu li:first-child{
+      li:first-child{
         font-weight: normal;
       }
     }
+
   }
+}
+// /HEADER TOP ******************************************************************
 
 
+// HEADER CENTER ***************************************************************
+.header-center-background{
+  height: 120px;
+  @include border-bottom-style-1;
+  .header-center{
+    @include content-style;
+    height: 100%;
+    &-logo{
+      height: 100%;
+      display: flex;
+      align-items: center;
 
-  .header-center-background{
-    height: 120px;
-
-    .header-center{
-      @include content-style;
-      &-logo{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid $colorBrd3;
-
-      }
-
-      &-logo img{
+      img{
         width: 100px;
       }
+
     }
 
   }
 
-  .header-bottom-background{
+}
+// /HEADER BOTTOM **************************************************************
+.header-bottom-background{
+  height: 60px;
+  .header-bottom{
+    @include content-style;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
-
-    .header-bottom{
-      @include content-style;
-      &-menu{
-
-      }
-
-      &-menu li{
+    &-menu{
+      li{
         @include menu-inline-li-dark-style-1;
       }
-      &-menu li:first-child{
+      li:first-child{
         color: $colorTxt4;
       }
-
     }
-
+    &-menu-2{
+      li{
+        @include menu-inline-li-dark-style-1;
+      }
+    }
   }
+}
+// /HEADER BOTTOM **************************************************************
 
-// }
-
-// Riga 1
-.content-row-1{
-
-
-
+// ROW 1 ***********************************************************************
+.row-1-background{
+  background-color: $colorBg3;
+  height: 635px;
 
 }
+// /ROW 1 ***********************************************************************
 
+// ROW 1 ***********************************************************************
+.row-2-background{
+  background-color: $colorBg1;
+  height: 540px;
+
+}
+// /ROW 1 ***********************************************************************
+
+// ROW 3 ***********************************************************************
 .row-3-background{
   background-color: $colorBg6;
   height: 150px;
@@ -175,18 +165,21 @@ h1,h2,h3 {
   .row-3{
     @include content-style;
     .menu-categories{
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 0;
+      i{
+        line-height: 50px;
+      }
       li{
         display: inline-block;
         cursor: pointer;
       }
 
-      li:first-child{
-        margin-right: 40px;
-      }
-
       .button-category{
         @include btn-category;
       }
+
 
       .button-category:hover{
         @include btn-category-hover;
@@ -196,24 +189,4 @@ h1,h2,h3 {
   }
 
 }
-
-// Container di esempio SCSS
-// #super-container{
-//
-//   width: 1200px;
-//   height: 400px;
-//   background-color: green;
-//
-//
-//   .content{
-//     color:black;
-//
-//     &-title{
-//       text-decoration: underline;
-//     }
-//
-//   }
-//
-//
-//
-// }
+// /ROW 3 ***********************************************************************

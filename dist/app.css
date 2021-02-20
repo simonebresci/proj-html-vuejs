@@ -415,7 +415,6 @@ h1, h2, h3 {
   height: 50px;
 }
 .header-top-background .header-top {
-  width: 70%;
   width: 1410px;
   margin: 0 auto;
 }
@@ -432,32 +431,32 @@ h1, h2, h3 {
 
 .header-center-background {
   height: 120px;
+  border: 1px solid #EDEDED;
 }
 .header-center-background .header-center {
-  width: 70%;
   width: 1410px;
   margin: 0 auto;
+  height: 100%;
 }
 .header-center-background .header-center-logo {
   height: 100%;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #EDEDED;
 }
 .header-center-background .header-center-logo img {
   width: 100px;
 }
 
 .header-bottom-background {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   height: 60px;
 }
 .header-bottom-background .header-bottom {
-  width: 70%;
   width: 1410px;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .header-bottom-background .header-bottom-menu li {
   color: #444444;
@@ -469,22 +468,43 @@ h1, h2, h3 {
 .header-bottom-background .header-bottom-menu li:first-child {
   color: #0088CC;
 }
+.header-bottom-background .header-bottom-menu-2 li {
+  color: #444444;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+.row-1-background {
+  background-color: #D6D6D6;
+  height: 635px;
+}
+
+.row-2-background {
+  background-color: #FFFFFF;
+  height: 540px;
+}
 
 .row-3-background {
   background-color: #0074AD;
   height: 150px;
 }
 .row-3-background .row-3 {
-  width: 70%;
   width: 1410px;
   margin: 0 auto;
+}
+.row-3-background .row-3 .menu-categories {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.row-3-background .row-3 .menu-categories i {
+  line-height: 50px;
 }
 .row-3-background .row-3 .menu-categories li {
   display: inline-block;
   cursor: pointer;
-}
-.row-3-background .row-3 .menu-categories li:first-child {
-  margin-right: 40px;
 }
 .row-3-background .row-3 .menu-categories .button-category {
   text-align: center;
@@ -493,7 +513,6 @@ h1, h2, h3 {
   height: 50px;
   font-weight: bold;
   line-height: 50px;
-  margin-right: 40px;
   color: #FFFFFF;
   background-color: #212529;
   cursor: pointer;
