@@ -15,6 +15,11 @@
   margin: 0 auto;
 }
 
+@mixin resetListBullets{
+  list-style: none;
+
+}
+
 @mixin menu-inline-li-light-style-1{
   color:$colorTxt1;
   display: inline-block;
@@ -129,6 +134,43 @@
   }
 }
 // /CARD ARTICLE STYLE 1
+
+// ARTICLE LIST WITH ICON STYLE 1
+@mixin articleIconImg-style-1{
+
+
+  .article{
+    display: flex;
+    border-bottom: 1px dotted $colorBrd4;
+    padding: 15px 0;
+
+
+    &-text{
+      @include resetListBullets;
+
+      &-name{
+        color: $colorTxt10;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &-date{
+        color: $colorTxt2;
+      }
+
+    }
+
+    &-img{
+      display: inline;
+      width: 50px;
+      height: 50px;
+      margin-right:15px;
+    }
+  }
+}
+
+
+// /ARTICLE LIST WITH ICON STYLE 1
 
 // /MIXIN **********************************************************************
 
@@ -250,13 +292,55 @@ h1,h2,h3 {
 }
 // /ROW 1 ***********************************************************************
 
-// ROW 1 ***********************************************************************
+// ROW 2 ***********************************************************************
 .row-2-background{
   background-color: $colorBg1;
   height: 540px;
 
+  .row-2{
+    @include content-style;
+    display: flex;
+    justify-content: space-between;
+
+    &-col-left, &-col-center, &-col-right{
+      width: 450px;
+      height: 100px;
+    }
+
+    &-col-left, &-col-center{
+      .articles-icon-list{
+          @include resetListBullets;
+          @include articleIconImg-style-1;
+
+          &-title{
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+      }
+    }
+
+    &-col-left{
+
+
+    }
+
+    &-col-center{
+
+
+    }
+
+    &-col-right{
+      background-color: blue;
+    }
+
+  }
+
+
+
+
+
 }
-// /ROW 1 ***********************************************************************
+// /ROW 2 ***********************************************************************
 
 // ROW 3 ***********************************************************************
 .row-3-background{

@@ -495,6 +495,48 @@ h1, h2, h3 {
   background-color: #FFFFFF;
   height: 540px;
 }
+.row-2-background .row-2 {
+  width: 1410px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.row-2-background .row-2-col-left, .row-2-background .row-2-col-center, .row-2-background .row-2-col-right {
+  width: 450px;
+  height: 100px;
+}
+.row-2-background .row-2-col-left .articles-icon-list, .row-2-background .row-2-col-center .articles-icon-list {
+  list-style: none;
+}
+.row-2-background .row-2-col-left .articles-icon-list .article, .row-2-background .row-2-col-center .articles-icon-list .article {
+  display: flex;
+  border-bottom: 1px dotted #E2E2E2;
+  padding: 15px 0;
+}
+.row-2-background .row-2-col-left .articles-icon-list .article-text, .row-2-background .row-2-col-center .articles-icon-list .article-text {
+  list-style: none;
+}
+.row-2-background .row-2-col-left .articles-icon-list .article-text-name, .row-2-background .row-2-col-center .articles-icon-list .article-text-name {
+  color: #1C2023;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.row-2-background .row-2-col-left .articles-icon-list .article-text-date, .row-2-background .row-2-col-center .articles-icon-list .article-text-date {
+  color: #B7B7B7;
+}
+.row-2-background .row-2-col-left .articles-icon-list .article-img, .row-2-background .row-2-col-center .articles-icon-list .article-img {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+.row-2-background .row-2-col-left .articles-icon-list-title, .row-2-background .row-2-col-center .articles-icon-list-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.row-2-background .row-2-col-right {
+  background-color: blue;
+}
 
 .row-3-background {
   background-color: #0074AD;
