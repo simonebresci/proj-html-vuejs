@@ -58,6 +58,16 @@
   border: 1px solid $colorBrd3;
 }
 
+@mixin card-article-size-1{
+  width: 450px;
+  height: 250px;
+}
+
+@mixin card-article-size-2{
+  width: 450px;
+  height: 190px;
+}
+
 
 // CARD ARTICLE STYLE 1
 @mixin card-article-style-1{
@@ -65,9 +75,8 @@
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  width: 450px;
-  height: 250px;
   padding: 25px 30px;
+  overflow: hidden;
 
   //Z INDEXES
   // layover -1 -- > 1 on hover
@@ -135,6 +144,11 @@
 }
 // /CARD ARTICLE STYLE 1
 
+@mixin list-title-style-1{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
 // ARTICLE LIST WITH ICON STYLE 1
 @mixin articleIconImg-style-1{
 
@@ -171,6 +185,38 @@
 
 
 // /ARTICLE LIST WITH ICON STYLE 1
+
+// AUTHOR LIST LI STYLE 1
+@mixin authorIconImg-style-1{
+
+
+  .author{
+    display: flex;
+    padding: 15px 0;
+
+    &-text{
+      @include resetListBullets;
+
+      &-name{
+        color: $colorTxt10;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &-description{
+        color: $colorTxt2;
+      }
+
+    }
+
+    &-img{
+      display: inline;
+      width: 110px;
+      height: 110px;
+      margin-right:15px;
+    }
+  }
+}
 
 // /MIXIN **********************************************************************
 
@@ -276,6 +322,7 @@ h1,h2,h3 {
 
     // CARD ARTICLE + ANIMATION
     .card-article{
+      @include card-article-size-1;
       @include card-article-style-1;
       margin-right: 20px;
       margin-bottom: 20px;
@@ -313,6 +360,7 @@ h1,h2,h3 {
           @include articleIconImg-style-1;
 
           &-title{
+            @include list-title-style-1;
             font-weight: bold;
             margin-bottom: 5px;
           }
@@ -330,7 +378,46 @@ h1,h2,h3 {
     }
 
     &-col-right{
-      background-color: blue;
+
+      .articles-list{
+        @include resetListBullets;
+        &-title{
+          @include list-title-style-1;
+        }
+
+      }
+
+      .card-article{
+        @include card-article-size-2;
+        @include card-article-style-1;
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+      }
+
+      .card-article:hover {
+        @include card-article-style-1-hover;
+
+      }
+
+      .author-list{
+          @include resetListBullets;
+          @include authorIconImg-style-1;
+
+          &-title{
+            @include list-title-style-1;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+      }
+
+      // .author-list{
+      //   @include resetListBullets;
+      //   &-title{
+      //     @include list-title-style-1;
+      //   }
+      //
+      // }
     }
 
   }
