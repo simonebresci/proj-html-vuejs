@@ -10,6 +10,7 @@
 // TODO: hover su icone font-awesome
 // TODO: card - slide testo in hover
 // TODO: controllare colori con trasparenza + sfumature blu
+// TODO: Resize pagina sfondo, ogni tanto si rompe
 
 // MIXIN **********************************************************************
 @mixin content-style{
@@ -20,6 +21,17 @@
 @mixin resetListBullets{
   list-style: none;
 
+}
+
+@mixin link-style-1{
+  color: $colorTxt4;
+  text-decoration: none;
+}
+
+@mixin link-style-1-bold{
+  color: $colorTxt4;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 @mixin menu-inline-li-light-style-1{
@@ -111,15 +123,16 @@
   &-content{
     z-index: 2;
     &-category{
-      display: inline-block;
-      max-width: 150px;
-      font-size: 14px;
-      font-weight: bold;
-      color: $colorTxt1;
-      background-color:  $colorBg5;
-      border-radius: 2px;
-      padding: 5px;
-      margin-bottom: 15px;
+      @include category-label-style-1;
+      // display: inline-block;
+      // max-width: 150px;
+      // font-size: 14px;
+      // font-weight: bold;
+      // color: $colorTxt1;
+      // background-color:  $colorBg5;
+      // border-radius: 2px;
+      // padding: 5px;
+      // margin-bottom: 15px;
     }
 
     &-title{
@@ -199,6 +212,29 @@
 
 
 // /ARTICLE LIST WITH ICON STYLE 1
+@mixin category-label-style-1{
+  display: inline-block;
+  max-width: 150px;
+  font-size: 14px;
+  font-weight: bold;
+  color: $colorTxt1;
+  background-color:  $colorBg5;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+@mixin category-label-style-2{
+  display: inline-block;
+  max-width: 150px;
+  font-size: 14px;
+  font-weight: bold;
+  color: $colorTxt1;
+  background-color:  $colorBg13;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 15px;
+}
 
 
 @mixin articleIconImg-style-2{
@@ -294,6 +330,45 @@
     color: $colorTxt1;
   }
 
+}
+
+@mixin comments-list-style-1{
+
+  .comment{
+    @include resetListBullets;
+    margin-bottom: 30px;
+
+    a{
+      @include link-style-1-bold;
+
+    }
+
+    a:hover{
+      @include hover-standard-style1;
+    }
+
+    &-text{
+      color: $colorTxt2;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+      .bullet{
+        color: $colorTxt4;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .author-name{
+        color: $colorTxt1;
+      }
+    }
+
+    &-date{
+      color: $colorTxt2;
+    }
+
+
+  }
 }
 
 // /MIXIN **********************************************************************
@@ -565,8 +640,10 @@ h1,h2,h3 {
 // FOOTER TOP ******************************************************************
 .footer-top-background{
   background-color: $colorBg9;
-  padding: 50px 0;
-  height: 400px;
+  // height: 400px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+
 
   .footer-top{
     @include content-style;
@@ -575,7 +652,6 @@ h1,h2,h3 {
 
     &-about{
       width: 420px;
-      border: 4px dashed green;
       .menu-dark{
         @include menu-dark-style-1;
 
@@ -591,7 +667,6 @@ h1,h2,h3 {
 
     &-posts{
       width: 320px;
-      border: 4px dashed green;
 
       .articles-icon-list{
           @include resetListBullets;
@@ -599,8 +674,8 @@ h1,h2,h3 {
 
           &-title{
             @include list-title-style-2;
-            font-weight: bold;
-            margin-bottom: 5px;
+            // font-weight: bold;
+            // margin-bottom: 5px;
           }
 
           .article:hover{
@@ -615,13 +690,37 @@ h1,h2,h3 {
 
       }
     }
+
     &-comments{
       width: 325px;
-      border: 4px dashed green;
+
+      .comments-list{
+        @include resetListBullets;
+        @include comments-list-style-1;
+
+        &-title{
+          @include list-title-style-2;
+          margin-bottom: 15px;
+        }
+      }
+
+
     }
     &-categories{
       width: 200px;
-      border: 4px dashed green;
+      // border: 4px dashed green;
+
+      .categories-list{
+        @include resetListBullets;
+        &-title{
+          @include list-title-style-2;
+          margin-bottom: 15px;
+        }
+      }
+
+      .category-label{
+        @include category-label-style-2;
+      }
     }
   }
 }
