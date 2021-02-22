@@ -5,6 +5,7 @@
 //******************************************************************************
 
 // ROW 1
+// TODO: font top header
 // TODO: margini card non tornano: messo 20px anzichè 30px;
 // TODO: eliminare margine inferiore dell'ultima riga delle card
 // TODO: hover su icone font-awesome
@@ -38,7 +39,7 @@
   color:$colorTxt1;
   display: inline-block;
   cursor:pointer;
-  font-weight: bold;
+  // font-weight: bold;
   margin-right: 25px;
 }
 
@@ -144,16 +145,17 @@
     }
 
     &-title{
-      font-size: 24px;
+      font-size: 20px;
       font-weight: bold;
       color: $colorTxt1;
     }
 
     &-description{
       display: none;
+      font-size: 16px;
       font-weight: bold;
       color: $colorTxt3;
-      margin-top: 15px;
+      margin-top: 5px;
     }
 
   }
@@ -174,11 +176,13 @@
 // /CARD ARTICLE STYLE 1
 
 @mixin list-title-style-1{
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
 @mixin list-title-style-2{
+  font-size: 14px;
   color: $colorTxt1;
   font-weight: bold;
   margin-bottom: 5px;
@@ -190,6 +194,7 @@
 
   .article{
     display: flex;
+    font-size: 14px;
     border-bottom: 1px dotted $colorBrd4;
     padding: 15px 0;
 
@@ -199,11 +204,12 @@
 
       &-name{
         color: $colorTxt10;
-        font-weight: bold;
+        // font-weight: bold;
         margin-bottom: 5px;
       }
 
       &-date{
+        font-size:12px;
         color: $colorTxt2;
       }
 
@@ -223,25 +229,25 @@
 @mixin category-label-style-1{
   display: inline-block;
   max-width: 150px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   color: $colorTxt1;
   background-color:  $colorBg5;
-  border-radius: 4px;
-  padding: 8px;
-  margin-bottom: 15px;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 @mixin category-label-style-2{
   display: inline-block;
   max-width: 150px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   color: $colorTxt1;
   background-color:  $colorBg13;
-  border-radius: 4px;
-  padding: 8px;
-  margin-bottom: 15px;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 
@@ -250,6 +256,7 @@
 
   .article{
     display: flex;
+    font-size: 14px;
     padding: 15px 0;
 
 
@@ -263,6 +270,7 @@
       }
 
       &-date{
+        font-size:12px;
         color: $colorTxt5;
       }
 
@@ -285,6 +293,7 @@
 
   .author{
     display: flex;
+    font-size: 16px;
     padding: 15px 0;
 
     &-text{
@@ -293,10 +302,11 @@
       &-name{
         color: $colorTxt10;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
 
       &-description{
+        font-size: 14px;
         color: $colorTxt2;
       }
 
@@ -387,6 +397,7 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  font-family:"Segoe UI", Roboto;
 }
 
 
@@ -412,8 +423,10 @@ h1,h2,h3 {
     @include content-style;
 
     &-navbar{
+
       li{
         @include menu-inline-li-light-style-1;
+        font-size: 14px;
       }
 
       li:hover{
@@ -463,6 +476,7 @@ h1,h2,h3 {
     &-menu{
       li{
         @include menu-inline-li-dark-style-1;
+        font-size: 14px;
       }
       li:hover{
         @include hover-standard-style1;
@@ -663,6 +677,7 @@ h1,h2,h3 {
       width: 420px;
       .menu-dark{
         @include menu-dark-style-1;
+
 
         &-highlight{
           cursor:pointer;

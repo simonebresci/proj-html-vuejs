@@ -342,6 +342,7 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  font-family: "Segoe UI", Roboto;
 }
 
 h1, h2, h3 {
@@ -366,8 +367,8 @@ h1, h2, h3 {
   color: #FFFFFF;
   display: inline-block;
   cursor: pointer;
-  font-weight: bold;
   margin-right: 25px;
+  font-size: 14px;
 }
 .header-top-background .header-top-navbar li:hover {
   opacity: 70%;
@@ -415,6 +416,7 @@ h1, h2, h3 {
   cursor: pointer;
   font-weight: bold;
   margin-right: 50px;
+  font-size: 14px;
 }
 .header-bottom-background .header-bottom-menu li:hover {
   opacity: 70%;
@@ -481,24 +483,25 @@ h1, h2, h3 {
 .row-1-background .row-1 .card-article-content-category {
   display: inline-block;
   max-width: 150px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   color: #FFFFFF;
   background-color: #0088CC;
-  border-radius: 4px;
-  padding: 8px;
-  margin-bottom: 15px;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 .row-1-background .row-1 .card-article-content-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #FFFFFF;
 }
 .row-1-background .row-1 .card-article-content-description {
   display: none;
+  font-size: 16px;
   font-weight: bold;
   color: #888888;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .row-1-background .row-1 .card-article:hover {
   cursor: pointer;
@@ -531,6 +534,7 @@ h1, h2, h3 {
 }
 .row-2-background .row-2-col-left .articles-icon-list .article, .row-2-background .row-2-col-center .articles-icon-list .article {
   display: flex;
+  font-size: 14px;
   border-bottom: 1px dotted #E2E2E2;
   padding: 15px 0;
 }
@@ -539,10 +543,10 @@ h1, h2, h3 {
 }
 .row-2-background .row-2-col-left .articles-icon-list .article-text-name, .row-2-background .row-2-col-center .articles-icon-list .article-text-name {
   color: #1C2023;
-  font-weight: bold;
   margin-bottom: 5px;
 }
 .row-2-background .row-2-col-left .articles-icon-list .article-text-date, .row-2-background .row-2-col-center .articles-icon-list .article-text-date {
+  font-size: 12px;
   color: #B7B7B7;
 }
 .row-2-background .row-2-col-left .articles-icon-list .article-img, .row-2-background .row-2-col-center .articles-icon-list .article-img {
@@ -552,6 +556,7 @@ h1, h2, h3 {
   margin-right: 15px;
 }
 .row-2-background .row-2-col-left .articles-icon-list-title, .row-2-background .row-2-col-center .articles-icon-list-title {
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
   font-weight: bold;
@@ -571,6 +576,7 @@ h1, h2, h3 {
   list-style: none;
 }
 .row-2-background .row-2-col-right .articles-list-title {
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
   margin-bottom: 40px;
@@ -612,24 +618,25 @@ h1, h2, h3 {
 .row-2-background .row-2-col-right .card-article-content-category {
   display: inline-block;
   max-width: 150px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   color: #FFFFFF;
   background-color: #0088CC;
-  border-radius: 4px;
-  padding: 8px;
-  margin-bottom: 15px;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 .row-2-background .row-2-col-right .card-article-content-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #FFFFFF;
 }
 .row-2-background .row-2-col-right .card-article-content-description {
   display: none;
+  font-size: 16px;
   font-weight: bold;
   color: #888888;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .row-2-background .row-2-col-right .card-article:hover {
   cursor: pointer;
@@ -647,6 +654,7 @@ h1, h2, h3 {
 }
 .row-2-background .row-2-col-right .author-list .author {
   display: flex;
+  font-size: 16px;
   padding: 15px 0;
 }
 .row-2-background .row-2-col-right .author-list .author-text {
@@ -655,9 +663,10 @@ h1, h2, h3 {
 .row-2-background .row-2-col-right .author-list .author-text-name {
   color: #1C2023;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .row-2-background .row-2-col-right .author-list .author-text-description {
+  font-size: 14px;
   color: #B7B7B7;
 }
 .row-2-background .row-2-col-right .author-list .author-img {
@@ -667,6 +676,7 @@ h1, h2, h3 {
   margin-right: 15px;
 }
 .row-2-background .row-2-col-right .author-list-title {
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
   font-weight: bold;
@@ -731,6 +741,7 @@ h1, h2, h3 {
   margin-bottom: 15px;
 }
 .footer-top-background .footer-top-about .menu-dark-title {
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
   color: #FFFFFF;
@@ -757,6 +768,7 @@ h1, h2, h3 {
 }
 .footer-top-background .footer-top-posts .articles-icon-list .article {
   display: flex;
+  font-size: 14px;
   padding: 15px 0;
 }
 .footer-top-background .footer-top-posts .articles-icon-list .article-text {
@@ -768,6 +780,7 @@ h1, h2, h3 {
   margin-bottom: 5px;
 }
 .footer-top-background .footer-top-posts .articles-icon-list .article-text-date {
+  font-size: 12px;
   color: #777777;
 }
 .footer-top-background .footer-top-posts .articles-icon-list .article-img {
@@ -778,6 +791,7 @@ h1, h2, h3 {
   border-radius: 50%;
 }
 .footer-top-background .footer-top-posts .articles-icon-list-title {
+  font-size: 14px;
   color: #FFFFFF;
   font-weight: bold;
   margin-bottom: 5px;
@@ -831,6 +845,7 @@ h1, h2, h3 {
   color: #B7B7B7;
 }
 .footer-top-background .footer-top-comments .comments-list-title {
+  font-size: 14px;
   color: #FFFFFF;
   font-weight: bold;
   margin-bottom: 5px;
@@ -843,6 +858,7 @@ h1, h2, h3 {
   list-style: none;
 }
 .footer-top-background .footer-top-categories .categories-list-title {
+  font-size: 14px;
   color: #FFFFFF;
   font-weight: bold;
   margin-bottom: 5px;
@@ -851,13 +867,13 @@ h1, h2, h3 {
 .footer-top-background .footer-top-categories .category-label {
   display: inline-block;
   max-width: 150px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   color: #FFFFFF;
   background-color: #000000;
-  border-radius: 4px;
-  padding: 8px;
-  margin-bottom: 15px;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 .footer-bottom-background {
