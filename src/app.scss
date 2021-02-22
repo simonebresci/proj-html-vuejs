@@ -502,6 +502,10 @@ h1,h2,h3 {
       li{
         @include menu-inline-li-dark-style-1;
       }
+
+      li:last-child{
+        margin-right: 0px;
+      }
     }
   }
 }
@@ -509,7 +513,7 @@ h1,h2,h3 {
 
 // ROW 1 ***********************************************************************
 .row-1-background{
-  background-color: $colorBg3;
+  background-color: $colorBg2;
   padding: 50px 0;
 
   .row-1{
@@ -641,7 +645,7 @@ h1,h2,h3 {
 
 // ROW 3 ***********************************************************************
 .row-3-background{
-  background-color: $colorBg6;
+  background-color: $colorBg5;
   height: 150px;
 
   .row-3{
@@ -675,7 +679,7 @@ h1,h2,h3 {
 
 // FOOTER TOP ******************************************************************
 .footer-top-background{
-  background-color: $colorBg9;
+  background-color: $colorBg8;
   // height: 400px;
   padding-top: 80px;
   padding-bottom: 100px;
