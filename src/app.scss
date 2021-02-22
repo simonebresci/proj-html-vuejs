@@ -14,6 +14,12 @@
 // TODO: Resize pagina sfondo, ogni tanto si rompe
 
 // MIXIN **********************************************************************
+
+@mixin background-common{
+  min-width: 1410px;
+
+}
+
 @mixin content-style{
   width: 1410px;
   margin: 0 auto;
@@ -427,6 +433,7 @@ h1,h2,h3 {
 
 // HEADER TOP ******************************************************************
 .header-top-background{
+  @include background-common;
   display: flex;
   align-items: center;
   background-color: $colorBg6;
@@ -458,8 +465,10 @@ h1,h2,h3 {
 
 // HEADER CENTER ***************************************************************
 .header-center-background{
-  height: 120px;
+  @include background-common;
   @include border-bottom-style-1;
+
+  height: 120px;
   .header-center{
     @include content-style;
     height: 100%;
@@ -479,6 +488,7 @@ h1,h2,h3 {
 }
 // /HEADER BOTTOM **************************************************************
 .header-bottom-background{
+  @include background-common;
   height: 60px;
   .header-bottom{
     @include content-style;
@@ -513,6 +523,7 @@ h1,h2,h3 {
 
 // ROW 1 ***********************************************************************
 .row-1-background{
+  @include background-common;
   background-color: $colorBg2;
   padding: 50px 0;
 
@@ -542,6 +553,7 @@ h1,h2,h3 {
 
 // ROW 2 ***********************************************************************
 .row-2-background{
+  @include background-common;
   background-color: $colorBg1;
   height: 540px;
 
@@ -645,6 +657,7 @@ h1,h2,h3 {
 
 // ROW 3 ***********************************************************************
 .row-3-background{
+  @include background-common;
   background-color: $colorBg5;
   height: 150px;
 
@@ -679,6 +692,7 @@ h1,h2,h3 {
 
 // FOOTER TOP ******************************************************************
 .footer-top-background{
+  @include background-common;
   background-color: $colorBg8;
   // height: 400px;
   padding-top: 80px;
@@ -774,6 +788,7 @@ h1,h2,h3 {
 
 // FOOTER BOTTOM ******************************************************************
 .footer-bottom-background{
+  @include background-common;
   background-color: $colorBg10;
   // padding: 50px 0;
   height: 100px;
