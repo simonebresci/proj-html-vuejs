@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!-- /Fine Librerie -->
 
-    <title>Blog</title>
+    <title>Blog Porto</title>
   </head>
   <body>
     <div id="root">
@@ -568,19 +568,22 @@
             <div class="footer-bottom-background">
               <div class="footer-bottom">
 
+                <div class="footer-bottom-logo">
+                  <img src="./img/footer/logo/logo-footer.png" alt="Logo azienda">
+                  <span class="footer-bottom-copyright"> © Copyright 2020. All Rights Reserved. </span>
+                </div>
+
+
+                <ul class="footer-bottom-links">
+                    <li v-for="el in footerLinks"><i class="fas fa-angle-right bullet"></i>{{el}}</li>
+                </ul>
+
+
               </div>
 
             </div>
 
           </footer>
-
-          <!-- Test Vue Navbar -->
-          <!-- <footer>
-            <ul>
-              <li v-for="el in footerLinks">{{el}}</li>
-            </ul>
-          </footer> -->
-          <!-- /Test Vue Navbar -->
 
       </div>
       <!-- /Container -->

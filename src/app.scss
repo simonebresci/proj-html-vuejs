@@ -42,6 +42,14 @@
   margin-right: 25px;
 }
 
+@mixin menu-inline-li-grey-style-1{
+  color:$colorTxt5;
+  display: inline-block;
+  cursor:pointer;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
 @mixin menu-inline-li-dark-style-1{
   color:$colorTxt7;
   display: inline-block;
@@ -309,6 +317,7 @@
   text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
   // background-color: rgba(0,0,0,0.3);
   border-radius: 5px;
+  text-decoration: underline;
 
 }
 
@@ -729,11 +738,47 @@ h1,h2,h3 {
 // FOOTER BOTTOM ******************************************************************
 .footer-bottom-background{
   background-color: $colorBg10;
-  padding: 50px 0;
-  height: 200px;
+  // padding: 50px 0;
+  height: 100px;
 
   .footer-bottom{
     @include content-style;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-logo{
+      display: inline-block;
+
+
+      img{
+        width: 75px;
+        vertical-align: middle;
+        margin-right: 45px;
+      }
+    }
+
+    &-copyright{
+      color: $colorTxt6;
+    }
+
+    &-links{
+      li{
+        @include menu-inline-li-grey-style-1;
+
+        .bullet{
+          color: $colorTxt5;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+      }
+
+      li:hover{
+        @include hover-standard-style1;
+      }
+    }
   }
+
 }
 // /FOOTER BOTTOM ******************************************************************
