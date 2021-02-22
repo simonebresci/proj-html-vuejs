@@ -5,13 +5,8 @@
 //******************************************************************************
 
 // ROW 1
-// TODO: font top header
-// TODO: margini card non tornano: messo 20px anzichè 30px;
 // TODO: eliminare margine inferiore dell'ultima riga delle card
-// TODO: hover su icone font-awesome
 // TODO: card - slide testo in hover
-// TODO: controllare colori con trasparenza + sfumature blu
-// TODO: Resize pagina sfondo, ogni tanto si rompe
 
 // MIXIN **********************************************************************
 
@@ -116,14 +111,14 @@
   // content 2
 
   &-layover{
-    opacity: 0%;
+    opacity: 15%;
     position: absolute;
     top:0;
     left:0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0,0.5);
-    z-index: -1;
+    background-color: rgb(0,0,0,1);
+    z-index: 1;
   }
 
   &-bg{
@@ -161,7 +156,7 @@
       display: none;
       font-size: 16px;
       font-weight: bold;
-      color: $colorTxt3;
+      color: $colorTxt2;
       margin-top: 5px;
     }
 
@@ -171,11 +166,15 @@
 
 @mixin card-article-style-1-hover{
   cursor: pointer;
+
   .card-article-content-description{
+
     display: block;
+
   }
+
   .card-article-layover{
-    opacity: 100%;
+    opacity: 50%;
     transition: opacity 2s;
     z-index: 1;
   }
@@ -230,9 +229,45 @@
     }
   }
 }
-
-
 // /ARTICLE LIST WITH ICON STYLE 1
+
+@mixin articleFullImg-style-1{
+
+
+  .article{
+    // display: flex;
+    font-size: 14px;
+    border-bottom: 1px dotted $colorBrd4;
+    padding: 15px 0;
+
+
+    &-text{
+      @include resetListBullets;
+      display: block;
+
+      &-name{
+        color: $colorTxt10;
+        // font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &-date{
+        font-size:12px;
+        color: $colorTxt2;
+      }
+
+    }
+
+    &-img{
+      display: inline;
+      width: 1050px;
+      height: 440px;
+      margin-right:15px;
+    }
+  }
+}
+
+
 @mixin category-label-style-1{
   display: inline-block;
   max-width: 150px;
@@ -497,6 +532,11 @@ h1,h2,h3 {
     align-items: center;
     justify-content: space-between;
     &-menu{
+      li:first-child{
+        color: $colorTxt4;
+      }
+    }
+    &-menu, &-menu-2{
       li{
         @include menu-inline-li-dark-style-1;
         font-size: 14px;
@@ -504,19 +544,20 @@ h1,h2,h3 {
       li:hover{
         @include hover-standard-style1;
       }
-      li:first-child{
-        color: $colorTxt4;
-      }
-    }
-    &-menu-2{
-      li{
-        @include menu-inline-li-dark-style-1;
-      }
 
       li:last-child{
         margin-right: 0px;
       }
     }
+    // &-menu-2{
+    //   li{
+    //     @include menu-inline-li-dark-style-1;
+    //   }
+    //
+    //   li:last-child{
+    //     margin-right: 0px;
+    //   }
+    // }
   }
 }
 // /HEADER BOTTOM **************************************************************
@@ -530,14 +571,15 @@ h1,h2,h3 {
   .row-1{
     @include content-style;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     // CARD ARTICLE + ANIMATION
     .card-article{
       @include card-article-size-1;
       @include card-article-style-1;
-      margin-right: 20px;
-      margin-bottom: 20px;
+      // margin-right: 20px;
+      margin-bottom: 30px;
 
     }
 
@@ -670,10 +712,14 @@ h1,h2,h3 {
       i{
         line-height: 50px;
       }
+      i:hover{
+        @include hover-standard-style1;
+      }
       li{
         display: inline-block;
         cursor: pointer;
       }
+
 
       .button-category{
         @include btn-category;
@@ -689,6 +735,49 @@ h1,h2,h3 {
 
 }
 // /ROW 3 **********************************************************************
+
+// ROW 4 ***********************************************************************
+.row-4-background{
+  @include background-common;
+  background-color: $colorBg1;
+
+  .row-4{
+    display: flex;
+    @include content-style;
+    .col-left{
+      width: 1050px;
+
+      .articles-full-img-list{
+          @include resetListBullets;
+          @include articleFullImg-style-1;
+
+          &-title{
+            @include list-title-style-1;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+
+          .article:hover{
+            cursor: pointer;
+          }
+
+          .article:hover .article-text .article-text-name{
+            @include hover-standard-style1;
+
+          }
+
+
+      }
+    }
+    .col-right{
+      width: 360px;
+    }
+
+
+  }
+}
+
+// /ROW 4 **********************************************************************
 
 // FOOTER TOP ******************************************************************
 .footer-top-background{
