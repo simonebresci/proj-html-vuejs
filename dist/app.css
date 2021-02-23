@@ -748,28 +748,113 @@ h1, h2, h3 {
 .row-4-background .row-4 .col-left .articles-full-img-list {
   list-style: none;
 }
-.row-4-background .row-4 .col-left .articles-full-img-list .article {
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article {
   font-size: 14px;
-  border-bottom: 1px dotted #E2E2E2;
+  border-bottom: 1px solid #E2E2E2;
   padding: 15px 0;
+  margin-bottom: 30px;
 }
-.row-4-background .row-4 .col-left .articles-full-img-list .article-text {
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-col-container {
+  display: flex;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-col-1 {
+  width: 60px;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-col-2 {
+  width: calc(100% - 60px);
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-date-style {
+  list-style: none;
+  text-align: center;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-date-style li {
+  width: 40px;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-date-style .day {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  padding: 15px 0px;
+  background-color: #F7F7F7;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-date-style .month {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  padding: 2px 0px;
+  background-color: #212529;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text {
   list-style: none;
   display: block;
 }
-.row-4-background .row-4 .col-left .articles-full-img-list .article-text-name {
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-name {
   color: #1C2023;
-  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-.row-4-background .row-4 .col-left .articles-full-img-list .article-text-date {
-  font-size: 12px;
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-name:hover {
+  opacity: 70%;
+  transition: opacity 0.4s, text-shadow 0.2s;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-paragraph {
   color: #B7B7B7;
+  font-size: 14px;
+  margin-bottom: 30px;
 }
-.row-4-background .row-4 .col-left .articles-full-img-list .article-img {
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-info {
+  display: flex;
+  justify-content: space-between;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-info .menu a {
+  color: #33b77b;
+  font-weight: bold;
+  text-decoration: none;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-info a:hover {
+  opacity: 70%;
+  transition: opacity 0.4s, text-shadow 0.2s;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-info i {
+  margin-right: 5px;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-info li {
+  color: #B7B7B7;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-info .full-article-text-read {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 10px;
+  color: #B7B7B7;
+  border: 1px solid #B7B7B7;
+  border-radius: 5px;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-info .full-article-text-read:hover {
+  opacity: 70%;
+  transition: opacity 0.4s, text-shadow 0.2s;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.row-4-background .row-4 .col-left .articles-full-img-list .full-article-img {
   display: inline;
   width: 1050px;
   height: 440px;
   margin-right: 15px;
+  margin-bottom: 25px;
 }
 .row-4-background .row-4 .col-left .articles-full-img-list-title {
   font-size: 14px;
@@ -908,7 +993,6 @@ h1, h2, h3 {
 }
 .footer-top-background .footer-top-comments .comments-list .comment a {
   color: #33b77b;
-  font-weight: bold;
   text-decoration: none;
 }
 .footer-top-background .footer-top-comments .comments-list .comment a:hover {

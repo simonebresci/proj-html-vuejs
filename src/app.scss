@@ -7,6 +7,7 @@
 // ROW 1
 // TODO: eliminare margine inferiore dell'ultima riga delle card
 // TODO: card - slide testo in hover
+// TODO: centrare dta in article full image
 
 // MIXIN **********************************************************************
 
@@ -24,6 +25,15 @@
   list-style: none;
 
 }
+
+@mixin link-style-reset{
+  text-decoration: none;
+
+  a{
+    text-decoration: none;
+  }
+}
+
 
 @mixin link-style-1{
   color: $colorTxt4;
@@ -49,6 +59,14 @@
   display: inline-block;
   cursor:pointer;
   font-weight: bold;
+  margin-right: 15px;
+}
+
+@mixin menu-inline-li-grey-style-2{
+  color:$colorTxt2;
+  display: inline-block;
+  cursor:pointer;
+  // font-weight: bold;
   margin-right: 15px;
 }
 
@@ -80,6 +98,16 @@
   transition: background-color 0.4s;
   background-color: $colorBg9;
 }
+
+@mixin btn-transparent-style-1{
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 10px;
+  color: $colorTxt2;
+  border: 1px solid $colorTxt2;
+  border-radius: 5px;
+}
+
 
 @mixin border-bottom-style-1{
   border: 1px solid $colorBrd3;
@@ -234,12 +262,51 @@
 @mixin articleFullImg-style-1{
 
 
-  .article{
+  .full-article{
     // display: flex;
     font-size: 14px;
-    border-bottom: 1px dotted $colorBrd4;
+    border-bottom: 1px solid $colorBrd4;
     padding: 15px 0;
+    margin-bottom: 30px;
 
+    &-col-container{
+      display: flex;
+
+    }
+
+    &-col-1{
+      width: 60px;
+    }
+
+    &-col-2{
+      width: calc(100% - 60px);
+    }
+
+
+    &-date-style{
+      @include resetListBullets;
+      text-align: center;
+
+      li{
+        width: 40px;;
+      }
+      .day{
+
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        padding: 15px 0px;
+        background-color: $colorBg2;
+      }
+
+      .month{
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        padding: 2px 0px;
+        background-color: $colorBg8;
+      }
+    }
 
     &-text{
       @include resetListBullets;
@@ -247,14 +314,53 @@
 
       &-name{
         color: $colorTxt10;
-        // font-weight: bold;
-        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
       }
 
-      &-date{
-        font-size:12px;
-        color: $colorTxt2;
+      &-name:hover{
+        @include hover-standard-style1;
       }
+
+      &-paragraph{
+        color: $colorTxt2;
+        font-size: 14px;
+        // font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      &-info{
+        display: flex;
+        justify-content: space-between;
+        .menu a{
+          @include link-style-1-bold;
+        }
+
+        a:hover{
+          @include hover-standard-style1;
+        }
+
+        i{
+          margin-right: 5px;
+        }
+        li{
+          @include menu-inline-li-grey-style-2;
+        }
+
+        .full-article-text-read{
+          @include btn-transparent-style-1;
+
+        }
+        .full-article-text-read:hover{
+          @include hover-standard-style1;
+
+        }
+      }
+
+
+
+
 
     }
 
@@ -263,7 +369,10 @@
       width: 1050px;
       height: 440px;
       margin-right:15px;
+      margin-bottom:25px;
     }
+
+
   }
 }
 
@@ -411,7 +520,7 @@
     margin-bottom: 30px;
 
     a{
-      @include link-style-1-bold;
+      @include link-style-1;
 
     }
 
