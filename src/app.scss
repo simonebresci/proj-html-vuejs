@@ -8,6 +8,7 @@
 // TODO: eliminare margine inferiore dell'ultima riga delle card
 // TODO: card - slide testo in hover
 // TODO: centrare dta in article full image
+// TODO: dettaglio btn- pages - accavallamento buttons
 
 // MIXIN **********************************************************************
 
@@ -106,6 +107,45 @@
   color: $colorTxt2;
   border: 1px solid $colorTxt2;
   border-radius: 5px;
+}
+
+
+@mixin btn-pages-list-style-1{
+  .btn-page:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .btn-page:nth-child(2){
+    font-weight: bold;
+    color: white;
+    background-color: $colorBg5;
+  }
+  .btn-page:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .btn-page:hover{
+    @include hover-standard-style1;
+  }
+}
+
+
+@mixin btn-page-style-1{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+
+  width: 35px;
+  height: 35px;
+  // font-weight: bold;
+  font-size: 16px;
+  // padding: 5px 10px;
+  color: $colorTxt4;
+  border: 1px solid $colorBrd2;
+  // border-radius: 5px;
+
 }
 
 
@@ -264,12 +304,39 @@
 
   .full-article{
     // display: flex;
+
     font-size: 14px;
     border-bottom: 1px solid $colorBrd4;
-    padding: 15px 0;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
 
-    &-col-container{
+
+
+    &-row-1{
+
+       > .full-article-img{
+         display: inline;
+         width: 1050px;
+         height: 440px;
+         // margin-right:15px;
+         margin-bottom:25px;
+      }
+
+      > .grid{
+        @include gridRow3;
+        // display: flex;
+        // flex-wrap: wrap;
+        margin-bottom:25px;
+
+        // > img{
+        //   width: calc(100% / 3);
+        //
+        //   // width: 50px;
+        // }
+      }
+    }
+
+    &-row-2{
       display: flex;
 
     }
@@ -364,15 +431,18 @@
 
     }
 
-    &-img{
-      display: inline;
-      width: 1050px;
-      height: 440px;
-      margin-right:15px;
-      margin-bottom:25px;
-    }
 
 
+
+
+  }
+}
+
+@mixin gridRow3{
+  display: flex;
+  flex-wrap: wrap;
+  > img{
+    width: calc(100% / 3);
   }
 }
 
@@ -398,6 +468,18 @@
   background-color:  $colorBg13;
   border-radius: 4px;
   padding: 5px;
+  margin-bottom: 10px;
+}
+
+@mixin tag-label-style-1{
+  display: inline-block;
+  max-width: 150px;
+  font-size: 10px;
+  font-weight: bold;
+  color: $colorTxt1;
+  background-color:  $colorBg13;
+  border-radius: 15px;
+  padding: 2px 6px;
   margin-bottom: 10px;
 }
 
@@ -437,6 +519,40 @@
   }
 }
 
+@mixin articleIconImg-style-3{
+
+
+  .article{
+    display: flex;
+    font-size: 14px;
+    padding: 15px 0;
+
+
+    &-text{
+      @include resetListBullets;
+
+      &-name{
+        color: $colorTxt2;
+        // font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      &-date{
+        font-size:12px;
+        color: $colorTxt4;
+      }
+
+    }
+
+    &-img{
+      display: inline;
+      // width: 70px;
+      height: 70px;
+      margin-right:15px;
+      border-radius: 50%;
+    }
+  }
+}
 
 // AUTHOR LIST LI STYLE 1
 @mixin authorIconImg-style-1{
@@ -477,7 +593,7 @@
   transition: opacity 0.4s, text-shadow 0.2s;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
   // background-color: rgba(0,0,0,0.3);
-  border-radius: 5px;
+  // border-radius: 5px;
   text-decoration: underline;
   cursor: pointer;
 
@@ -851,8 +967,9 @@ h1,h2,h3 {
   background-color: $colorBg1;
 
   .row-4{
-    display: flex;
     @include content-style;
+    display: flex;
+    padding: 65px 0px;
     .col-left{
       width: 1050px;
 
@@ -880,6 +997,116 @@ h1,h2,h3 {
     }
     .col-right{
       width: 360px;
+      padding: 0px 30px;
+
+      .social-twitter{
+        width: 320px;
+
+        .articles-icon-list{
+            @include resetListBullets;
+            @include articleIconImg-style-3;
+
+            &-title{
+              @include list-title-style-1;
+              // font-weight: bold;
+              // margin-bottom: 5px;
+            }
+
+            .article:hover{
+              cursor: pointer;
+            }
+
+            .article:hover .article-text .article-text-name{
+              @include hover-standard-style1;
+
+            }
+
+
+        }
+      }
+
+      .social-instagram{
+        margin-bottom: 20px;
+
+        .list-title{
+          @include list-title-style-1;
+          margin-bottom: 20px;
+        }
+        .grid{
+          @include gridRow3;
+          margin-bottom: 25px;
+        }
+        .grid:hover{
+          @include hover-standard-style1;
+        }
+
+        .tag-list{
+          @include resetListBullets;
+          &-title{
+            @include list-title-style-1;
+            margin-bottom: 15px;
+          }
+          .tag-label{
+            @include tag-label-style-1;
+            margin-right: 5px;
+
+          }
+          .tag-label:hover{
+            @include hover-standard-style1;
+
+          }
+        }
+
+
+
+
+      }
+
+      .social-facebook{
+        .list-title{
+          @include list-title-style-1;
+          margin-bottom: 20px;
+        }
+
+        .theme-container{
+          display: flex;
+          height: 50px;
+          .bullet{
+            display: inline-block;
+            width: 5px;
+            height: 100%;
+            background-color: $colorBg2;
+            margin-right: 15px;
+          }
+          .theme{
+            color: $colorTxt4;
+            vertical-align: middle;
+            line-height: 50px;
+          }
+        }
+
+        .theme-container:hover{
+          @include hover-standard-style1;
+        }
+
+
+
+
+      }
+
+
+    }
+
+    .btn-pages-list{
+      @include resetListBullets;
+      @include btn-pages-list-style-1;
+      display: flex;
+      justify-content: flex-end;
+      .btn-page{
+        @include btn-page-style-1;
+      }
+
+
     }
 
 
