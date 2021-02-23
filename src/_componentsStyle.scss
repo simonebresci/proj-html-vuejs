@@ -1,0 +1,417 @@
+@mixin card-article-size-1{
+  width: 450px;
+  height: 250px;
+}
+
+@mixin card-article-size-2{
+  width: 450px;
+  height: 190px;
+}
+
+
+// CARD ARTICLE STYLE 1
+@mixin card-article-style-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  padding: 25px 30px;
+  overflow: hidden;
+
+  //Z INDEXES
+  // layover -1 -- > 1 on hover
+  // bg 0
+  // content 2
+
+  &-layover{
+    opacity: 15%;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,1);
+    z-index: 1;
+  }
+
+  &-bg{
+    position: absolute;
+    background-color: rgb(0,0,0);
+    opacity: 100%;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &-content{
+    z-index: 2;
+    &-category{
+      @include category-label-style-1;
+      // display: inline-block;
+      // max-width: 150px;
+      // font-size: 14px;
+      // font-weight: bold;
+      // color: $colorTxt1;
+      // background-color:  $colorBg5;
+      // border-radius: 2px;
+      // padding: 5px;
+      // margin-bottom: 15px;
+    }
+
+    &-title{
+      font-size: 20px;
+      font-weight: bold;
+      color: $colorTxt1;
+    }
+
+    &-description{
+      display: none;
+      font-size: 16px;
+      font-weight: bold;
+      color: $colorTxt2;
+      margin-top: 5px;
+    }
+
+  }
+
+}
+
+@mixin card-article-style-1-hover{
+  cursor: pointer;
+
+  .card-article-content-description{
+
+    display: block;
+
+  }
+
+  .card-article-layover{
+    opacity: 50%;
+    transition: opacity 2s;
+    z-index: 1;
+  }
+}
+// /CARD ARTICLE STYLE 1
+
+
+// ARTICLE LIST WITH ICON STYLE 1
+@mixin articleIconImg-style-1{
+
+
+  .article{
+    display: flex;
+    font-size: 14px;
+    border-bottom: 1px dotted $colorBrd4;
+    padding: 15px 0;
+
+
+    &-text{
+      @include resetListBullets;
+
+      &-name{
+        color: $colorTxt10;
+        // font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &-date{
+        font-size:12px;
+        color: $colorTxt2;
+      }
+
+    }
+
+    &-img{
+      display: inline;
+      width: 50px;
+      height: 50px;
+      margin-right:15px;
+    }
+  }
+}
+// /ARTICLE LIST WITH ICON STYLE 1
+
+@mixin articleFullImg-style-1{
+
+
+  .full-article{
+    // display: flex;
+
+    font-size: 14px;
+    border-bottom: 1px solid $colorBrd4;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+
+
+
+    &-row-1{
+
+       > .full-article-img{
+         display: inline;
+         width: 1050px;
+         height: 440px;
+         // margin-right:15px;
+         margin-bottom:25px;
+      }
+
+      > .grid{
+        @include gridRow3;
+        // display: flex;
+        // flex-wrap: wrap;
+        margin-bottom:25px;
+
+        // > img{
+        //   width: calc(100% / 3);
+        //
+        //   // width: 50px;
+        // }
+      }
+    }
+
+    &-row-2{
+      display: flex;
+
+    }
+
+    &-col-1{
+      width: 60px;
+    }
+
+    &-col-2{
+      width: calc(100% - 60px);
+    }
+
+
+    &-date-style{
+      @include resetListBullets;
+      text-align: center;
+
+      li{
+        width: 40px;;
+      }
+      .day{
+
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        padding: 15px 0px;
+        background-color: $colorBg2;
+      }
+
+      .month{
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        padding: 2px 0px;
+        background-color: $colorBg8;
+      }
+    }
+
+    &-text{
+      @include resetListBullets;
+      display: block;
+
+      &-name{
+        color: $colorTxt10;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      &-name:hover{
+        @include hover-standard-style1;
+      }
+
+      &-paragraph{
+        color: $colorTxt2;
+        font-size: 15px;
+        line-height: 30px;
+
+        margin-bottom: 30px;
+      }
+
+      &-info{
+        display: flex;
+        justify-content: space-between;
+        .menu a{
+          @include link-style-1-bold;
+        }
+
+        a:hover{
+          @include hover-standard-style1;
+        }
+
+        i{
+          margin-right: 5px;
+        }
+        li{
+          @include menu-inline-li-grey-style-2;
+        }
+
+        .full-article-text-read{
+          @include btn-transparent-style-1;
+
+        }
+        .full-article-text-read:hover{
+          @include hover-standard-style1;
+
+        }
+      }
+
+
+
+
+
+    }
+
+
+
+
+
+  }
+}
+
+@mixin articleIconImg-style-2{
+
+
+  .article{
+    display: flex;
+    font-size: 14px;
+    padding: 15px 0;
+
+
+    &-text{
+      @include resetListBullets;
+
+      &-name{
+        color: $colorTxt2;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &-date{
+        font-size:12px;
+        color: $colorTxt5;
+      }
+
+    }
+
+    &-img{
+      display: inline;
+      width: 70px;
+      height: 70px;
+      margin-right:15px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@mixin articleIconImg-style-3{
+
+
+  .article{
+    display: flex;
+    font-size: 14px;
+    padding: 15px 0;
+
+
+    &-text{
+      @include resetListBullets;
+
+      &-name{
+        color: $colorTxt2;
+        // font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      &-date{
+        font-size:12px;
+        color: $colorTxt4;
+      }
+
+    }
+
+    &-img{
+      display: inline;
+      // width: 70px;
+      height: 70px;
+      margin-right:15px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@mixin authorIconImg-style-1{
+
+
+  .author{
+    display: flex;
+    font-size: 16px;
+    padding: 15px 0;
+
+    &-text{
+      @include resetListBullets;
+
+      &-name{
+        color: $colorTxt10;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      &-description{
+        font-size: 14px;
+        color: $colorTxt2;
+      }
+
+    }
+
+    &-img{
+      display: inline;
+      width: 110px;
+      height: 110px;
+      margin-right:15px;
+    }
+  }
+}
+
+@mixin comments-list-style-1{
+
+  .comment{
+    @include resetListBullets;
+    font-size: 14px;
+    margin-bottom: 30px;
+
+    a{
+      @include link-style-1;
+
+    }
+
+    a:hover{
+      @include hover-standard-style1;
+    }
+
+    &-text{
+      color: $colorTxt2;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+      .bullet{
+        color: $colorTxt4;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .author-name{
+        color: $colorTxt1;
+      }
+    }
+
+    &-date{
+      font-size: 12px;
+      color: $colorTxt5;
+    }
+
+
+  }
+}

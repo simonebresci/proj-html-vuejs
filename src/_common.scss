@@ -1,0 +1,255 @@
+@mixin background-common{
+  min-width: 1410px;
+
+}
+
+@mixin content-style{
+  width: 1410px;
+  margin: 0 auto;
+}
+
+@mixin resetListBullets{
+  list-style: none;
+
+}
+
+
+// BORDERS *********************************************************************
+@mixin border-bottom-style-1{
+  border: 1px solid $colorBrd3;
+}
+// *****************************************************************************
+
+//  LINKS **********************************************************************
+@mixin link-style-reset{
+  text-decoration: none;
+
+  a{
+    text-decoration: none;
+  }
+}
+
+@mixin link-style-1{
+  color: $colorTxt4;
+  text-decoration: none;
+}
+
+@mixin link-style-1-bold{
+  color: $colorTxt4;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+// *****************************************************************************
+
+// MENU & lIST ***********************************************************************
+@mixin menu-inline-li-light-style-1{
+  color:$colorTxt1;
+  display: inline-block;
+  cursor:pointer;
+  // font-weight: bold;
+  margin-right: 25px;
+}
+
+@mixin menu-inline-li-grey-style-1{
+  color:$colorTxt5;
+  display: inline-block;
+  cursor:pointer;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+@mixin menu-inline-li-grey-style-2{
+  color:$colorTxt2;
+  display: inline-block;
+  cursor:pointer;
+  // font-weight: bold;
+  margin-right: 15px;
+}
+
+@mixin menu-inline-li-dark-style-1{
+  color:$colorTxt7;
+  display: inline-block;
+  cursor:pointer;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+@mixin menu-dark-style-1{
+  @include resetListBullets;
+  color: $colorTxt5;
+
+  li{
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  &-title{
+    @include list-title-style-1;
+    color: $colorTxt1;
+  }
+
+  &-viewmore{
+    font-weight: bold;
+    color: $colorTxt1;
+
+    i{
+      margin-left: 5px;
+    }
+  }
+
+  &-viewmore:hover{
+    @include hover-standard-style1;
+  }
+
+}
+
+@mixin list-title-style-1{
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@mixin list-title-style-2{
+  font-size: 14px;
+  color: $colorTxt1;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+// /MENU ***********************************************************************
+
+// BUTTONS *********************************************************************
+@mixin btn-category{
+  text-align: center;
+  display: inline-block;
+  width: 185px;
+  height: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 50px;
+  // margin-right: 40px;
+  color: $colorTxt1;
+  background-color: $colorBg8;
+  cursor: pointer;
+}
+
+@mixin btn-category-hover{
+  transition: background-color 0.4s;
+  background-color: $colorBg9;
+}
+
+@mixin btn-transparent-style-1{
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 10px;
+  color: $colorTxt2;
+  border: 1px solid $colorTxt2;
+  border-radius: 5px;
+}
+
+
+@mixin btn-pages-list-style-1{
+  .btn-page:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .btn-page:nth-child(2){
+    font-weight: bold;
+    color: white;
+    background-color: $colorBg5;
+  }
+  .btn-page:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .btn-page:hover{
+    @include hover-standard-style1;
+  }
+}
+
+
+@mixin btn-page-style-1{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+
+  width: 35px;
+  height: 35px;
+  // font-weight: bold;
+  font-size: 16px;
+  // padding: 5px 10px;
+  color: $colorTxt4;
+  border: 1px solid $colorBrd2;
+  // border-radius: 5px;
+
+}
+
+// *****************************************************************************
+
+// CATEGORIES & TAG LABELS *****************************************************
+@mixin category-label-style-1{
+  display: inline-block;
+  max-width: 150px;
+  font-size: 10px;
+  font-weight: bold;
+  color: $colorTxt1;
+  background-color:  $colorBg5;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+@mixin category-label-style-2{
+  display: inline-block;
+  max-width: 150px;
+  font-size: 10px;
+  font-weight: bold;
+  color: $colorTxt1;
+  background-color:  $colorBg13;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+@mixin tag-label-style-1{
+  display: inline-block;
+  max-width: 150px;
+  font-size: 10px;
+  font-weight: bold;
+  color: $colorTxt1;
+  background-color:  $colorBg13;
+  border-radius: 15px;
+  padding: 2px 6px;
+  margin-bottom: 10px;
+}
+// /CATEGORIES & TAG LABELS ***************************************************
+
+// GRIDS ***********************************************************************
+@mixin gridRow3{
+  display: flex;
+  flex-wrap: wrap;
+  > img{
+    width: calc(100% / 3);
+  }
+}
+// /GRIDS *********************************************************************
+
+
+// HOVER ANIMATIONS ***********************************************************
+@mixin hover-standard-style1{
+  opacity: 70%;
+  transition: opacity 0.4s, text-shadow 0.2s;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  // background-color: rgba(0,0,0,0.3);
+  // border-radius: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+
+// /HOVER ANIMATIONS ***********************************************************
