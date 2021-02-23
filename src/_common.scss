@@ -76,7 +76,7 @@
   margin-right: 50px;
 }
 
-@mixin menu-dark-style-1{
+@mixin list-paragraph-style-1{
   @include resetListBullets;
   color: $colorTxt5;
 
@@ -245,11 +245,16 @@
   opacity: 70%;
   transition: opacity 0.4s, text-shadow 0.2s;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-  // background-color: rgba(0,0,0,0.3);
-  // border-radius: 5px;
   text-decoration: underline;
   cursor: pointer;
 
+}
+
+@mixin hover-standard-style2{
+  transition: opacity 0.4s, text-shadow 0.2s;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 // /HOVER ANIMATIONS ***********************************************************

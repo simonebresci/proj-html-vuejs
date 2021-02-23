@@ -1,11 +1,12 @@
 
+// SCSS IMPORTS ****************************************************************
 @import "colors";
 @import "common";
 @import "componentsStyle";
 
 //******************************************************************************
 
-// GENERIC CLASS ***************************************************************
+// GENERIC PROPERTIES **********************************************************
 *{
   box-sizing: border-box;
   padding: 0px;
@@ -13,16 +14,10 @@
   font-family:"Segoe UI", Roboto;
 }
 
-
-h1,h2,h3 {
-  font-size: 36px;
-}
-
-
 .container{
   width: 100%;
 }
-// /GENERIC CLASS ***************************************************************
+// /GENERIC CLASS **************************************************************
 
 
 // HEADER TOP ******************************************************************
@@ -54,18 +49,19 @@ h1,h2,h3 {
 
   }
 }
-// /HEADER TOP ******************************************************************
+// /HEADER TOP *****************************************************************
 
 
 // HEADER CENTER ***************************************************************
 .header-center-background{
   @include background-common;
   @include border-bottom-style-1;
-
   height: 120px;
+
   .header-center{
     @include content-style;
     height: 100%;
+
     &-logo{
       height: 100%;
       display: flex;
@@ -84,22 +80,26 @@ h1,h2,h3 {
 .header-bottom-background{
   @include background-common;
   height: 60px;
+
   .header-bottom{
     @include content-style;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     &-menu{
       li:first-child{
         color: $colorTxt4;
       }
     }
+
     &-menu, &-menu-2{
       li{
         @include menu-inline-li-dark-style-1;
         font-size: 14px;
       }
+
       li:hover{
         @include hover-standard-style1;
       }
@@ -108,15 +108,6 @@ h1,h2,h3 {
         margin-right: 0px;
       }
     }
-    // &-menu-2{
-    //   li{
-    //     @include menu-inline-li-dark-style-1;
-    //   }
-    //
-    //   li:last-child{
-    //     margin-right: 0px;
-    //   }
-    // }
   }
 }
 // /HEADER BOTTOM **************************************************************
@@ -133,24 +124,20 @@ h1,h2,h3 {
     justify-content: space-between;
     flex-wrap: wrap;
 
-    // CARD ARTICLE + ANIMATION
     .card-article{
       @include card-article-size-1;
       @include card-article-style-1;
-      // margin-right: 20px;
       margin-bottom: 30px;
-
     }
 
     .card-article:hover {
       @include card-article-style-1-hover;
-
     }
-    // /CARD ARTICLE + ANIMATION
+
   }
 
 }
-// /ROW 1 ***********************************************************************
+// /ROW 1 **********************************************************************
 
 // ROW 2 ***********************************************************************
 .row-2-background{
@@ -164,12 +151,13 @@ h1,h2,h3 {
     justify-content: space-between;
     padding: 50px 0;
 
+    // Common width
     &-col-left, &-col-center, &-col-right{
       width: 450px;
-      // height: 100px;
     }
 
     &-col-left, &-col-center{
+
       .articles-icon-list{
           @include resetListBullets;
           @include articleIconImg-style-1;
@@ -178,10 +166,6 @@ h1,h2,h3 {
             @include list-title-style-1;
             font-weight: bold;
             margin-bottom: 5px;
-          }
-
-          .article:hover{
-            cursor: pointer;
           }
 
           .article:hover .article-text .article-text-name{
@@ -193,20 +177,11 @@ h1,h2,h3 {
       }
     }
 
-    &-col-left{
-
-
-    }
-
-    &-col-center{
-
-
-    }
-
     &-col-right{
 
       .articles-list{
         @include resetListBullets;
+
         &-title{
           @include list-title-style-1;
           margin-bottom:40px;
@@ -238,13 +213,6 @@ h1,h2,h3 {
           }
       }
 
-      // .author-list{
-      //   @include resetListBullets;
-      //   &-title{
-      //     @include list-title-style-1;
-      //   }
-      //
-      // }
     }
 
   }
@@ -254,7 +222,7 @@ h1,h2,h3 {
 
 
 }
-// /ROW 2 ***********************************************************************
+// /ROW 2 **********************************************************************
 
 // ROW 3 ***********************************************************************
 .row-3-background{
@@ -268,22 +236,27 @@ h1,h2,h3 {
       display: flex;
       justify-content: space-between;
       padding: 50px 0;
-      i{
-        line-height: 50px;
-      }
-      i:hover{
-        @include hover-standard-style1;
-      }
+
+
+      // Arrow style
       li{
-        display: inline-block;
-        cursor: pointer;
+        @include resetListBullets;
+
+        i{
+          line-height: 50px;
+        }
+
+        i:hover{
+          @include hover-standard-style1;
+        }
+
       }
+      // /Arrow style
 
 
       .button-category{
         @include btn-category;
       }
-
 
       .button-category:hover{
         @include btn-category-hover;
@@ -304,6 +277,7 @@ h1,h2,h3 {
     @include content-style;
     display: flex;
     padding: 65px 0px;
+
     .col-left{
       width: 1050px;
 
@@ -317,18 +291,26 @@ h1,h2,h3 {
             margin-bottom: 5px;
           }
 
-          .article:hover{
-            cursor: pointer;
-          }
-
           .article:hover .article-text .article-text-name{
             @include hover-standard-style1;
-
           }
+
+      }
+
+      .btn-pages-list{
+        @include resetListBullets;
+        @include btn-pages-list-style-1;
+        display: flex;
+        justify-content: flex-end;
+
+        .btn-page{
+          @include btn-page-style-1;
+        }
 
 
       }
     }
+
     .col-right{
       width: 360px;
       padding: 0px 30px;
@@ -343,20 +325,11 @@ h1,h2,h3 {
 
             &-title{
               @include list-title-style-1;
-              // font-weight: bold;
-              // margin-bottom: 5px;
-            }
-
-            .article:hover{
-              cursor: pointer;
             }
 
             .article:hover .article-text .article-text-name{
-              @include hover-standard-style1;
-
+              @include hover-standard-style2;
             }
-
-
         }
       }
 
@@ -406,6 +379,7 @@ h1,h2,h3 {
         .theme-container{
           display: flex;
           height: 50px;
+
           .bullet{
             display: inline-block;
             width: 5px;
@@ -424,25 +398,10 @@ h1,h2,h3 {
           @include hover-standard-style1;
         }
 
-
-
-
       }
-
-
     }
 
-    .btn-pages-list{
-      @include resetListBullets;
-      @include btn-pages-list-style-1;
-      display: flex;
-      justify-content: flex-end;
-      .btn-page{
-        @include btn-page-style-1;
-      }
 
-
-    }
 
 
   }
@@ -454,7 +413,6 @@ h1,h2,h3 {
 .footer-top-background{
   @include background-common;
   background-color: $colorBg8;
-  // height: 400px;
   padding-top: 80px;
   padding-bottom: 100px;
 
@@ -467,11 +425,7 @@ h1,h2,h3 {
     &-about{
       width: 420px;
       .menu-dark{
-        @include menu-dark-style-1;
-
-        &-highlight{
-          cursor:pointer;
-        }
+        @include list-paragraph-style-1;
 
         &-highlight:hover{
           @include hover-standard-style1;
@@ -488,19 +442,12 @@ h1,h2,h3 {
 
           &-title{
             @include list-title-style-2;
-            // font-weight: bold;
-            // margin-bottom: 5px;
-          }
-
-          .article:hover{
-            cursor: pointer;
           }
 
           .article:hover .article-text .article-text-name{
             @include hover-standard-style1;
 
           }
-
 
       }
     }
@@ -520,9 +467,9 @@ h1,h2,h3 {
 
 
     }
+
     &-categories{
       width: 200px;
-      // border: 4px dashed green;
 
       .categories-list{
         @include resetListBullets;
@@ -544,13 +491,12 @@ h1,h2,h3 {
     }
   }
 }
-// /FOOTER TOP ******************************************************************
+// /FOOTER TOP *****************************************************************
 
-// FOOTER BOTTOM ******************************************************************
+// FOOTER BOTTOM ***************************************************************
 .footer-bottom-background{
   @include background-common;
   background-color: $colorBg10;
-  // padding: 50px 0;
   height: 100px;
 
   .footer-bottom{
@@ -562,7 +508,6 @@ h1,h2,h3 {
 
     &-logo{
       display: inline-block;
-
 
       img{
         width: 75px;
@@ -595,4 +540,4 @@ h1,h2,h3 {
   }
 
 }
-// /FOOTER BOTTOM ******************************************************************
+// /FOOTER BOTTOM **************************************************************
