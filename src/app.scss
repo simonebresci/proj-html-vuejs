@@ -381,7 +381,7 @@
 
       &-name{
         color: $colorTxt10;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
         margin-bottom: 20px;
       }
@@ -392,8 +392,9 @@
 
       &-paragraph{
         color: $colorTxt2;
-        font-size: 14px;
-        // font-weight: bold;
+        font-size: 15px;
+        line-height: 30px;
+
         margin-bottom: 30px;
       }
 
@@ -1001,6 +1002,7 @@ h1,h2,h3 {
 
       .social-twitter{
         width: 320px;
+        margin-bottom: 30px;
 
         .articles-icon-list{
             @include resetListBullets;
@@ -1026,7 +1028,7 @@ h1,h2,h3 {
       }
 
       .social-instagram{
-        margin-bottom: 20px;
+        margin-bottom: 60px;
 
         .list-title{
           @include list-title-style-1;

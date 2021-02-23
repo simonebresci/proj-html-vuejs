@@ -801,7 +801,7 @@ h1, h2, h3 {
 }
 .row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-name {
   color: #1C2023;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -814,7 +814,8 @@ h1, h2, h3 {
 }
 .row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-paragraph {
   color: #B7B7B7;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 30px;
   margin-bottom: 30px;
 }
 .row-4-background .row-4 .col-left .articles-full-img-list .full-article-text-info {
@@ -880,6 +881,7 @@ h1, h2, h3 {
 }
 .row-4-background .row-4 .col-right .social-twitter {
   width: 320px;
+  margin-bottom: 30px;
 }
 .row-4-background .row-4 .col-right .social-twitter .articles-icon-list {
   list-style: none;
@@ -922,7 +924,7 @@ h1, h2, h3 {
   cursor: pointer;
 }
 .row-4-background .row-4 .col-right .social-instagram {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 .row-4-background .row-4 .col-right .social-instagram .list-title {
   font-size: 14px;
