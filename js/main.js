@@ -6,7 +6,11 @@ var app = new Vue ({
     headerBottomNavbar: ['HOME','ELEMENTS','FEATURES', 'PAGES', 'PORTFOLIO', 'BLOG','SHOP'],
 
     // FOOTER DATA
-    footerLinks: ['FAQ\'s', 'Sitemap', 'Contact Us']
+    footerTopCategories: ['GADGETS','PHOTOGRAPHY','LIFESTYLE','FASHION', 'RECIPES',
+                          'TRAVEL', 'BUSINESS', ' ARCHITECTURE', 'REVIEWS', 'SPORTS',
+                          'VIDEOS', 'TECHNOLOGY', 'DESIGN'],
+
+    footerBottomLinks: ['FAQ\'s', 'Sitemap', 'Contact Us']
   },
 
 });

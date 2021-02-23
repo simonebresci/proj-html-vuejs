@@ -132,8 +132,6 @@
     padding-bottom: 30px;
     margin-bottom: 50px;
 
-
-
     &-row-1{
 
        > .full-article-img{
@@ -162,7 +160,6 @@
     &-col-2{
       width: calc(100% - 60px);
     }
-
 
     &-date-style{
       @include resetListBullets;
@@ -195,7 +192,7 @@
 
       &-name{
         color: $colorTxt10;
-        font-size: 24px;
+        font-size: 26px;
         font-weight: bold;
         margin-bottom: 20px;
       }
@@ -203,6 +200,7 @@
       &-name:hover{
         @include hover-standard-style1;
       }
+
 
       &-paragraph{
         color: $colorTxt2;

@@ -25,7 +25,7 @@
               <ul class="header-top-navbar">
                 <!-- Slogan & navbar -->
                 <li>Everything about Lifestyle, Travel and Gadgets!</li>
-                <li v-for="el in headerTopNavbar">{{el}} </li>
+                <li v-for="el in headerTopNavbar">{{el}}</li>
 
               </ul>
             </div>
@@ -1039,19 +1039,10 @@
                 <div class="footer-top-categories">
                   <ul class="categories-list">
                     <li class="categories-list-title">CATEGORIES</li>
-                    <li class="category-label">GADGETS</li>
-                    <li class="category-label">PHOTOGRAPHY</li>
-                    <li class="category-label">LIFESTYLE</li>
-                    <li class="category-label">FASHION</li>
-                    <li class="category-label">RECIPES</li>
-                    <li class="category-label">TRAVEL</li>
-                    <li class="category-label">BUSINESS</li>
-                    <li class="category-label">ARCHITECTURE</li>
-                    <li class="category-label">REVIEWS</li>
-                    <li class="category-label">SPORTS</li>
-                    <li class="category-label">VIDEOS</li>
-                    <li class="category-label">TECHNOLOGY</li>
-                    <li class="category-label">DESIGN</li>
+                    <li v-for="element in footerTopCategories"
+                        class="category-label">
+                        {{element}}
+                    </li>
                   </ul>
                 </div>
                 <!-- /Categories -->
@@ -1075,7 +1066,7 @@
 
                 <!-- Links -->
                 <ul class="footer-bottom-links">
-                    <li v-for="el in footerLinks"><i class="fas fa-angle-right bullet"></i>{{el}}</li>
+                    <li v-for="el in footerBottomLinks"><i class="fas fa-angle-right bullet"></i>{{el}}</li>
                 </ul>
                 <!-- /Links -->
 
